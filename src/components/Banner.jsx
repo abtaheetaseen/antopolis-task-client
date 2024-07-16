@@ -18,7 +18,7 @@ const Banner = () => {
     const buttonCategory = allButtonCategory?.map(item => item.category)
 
     // get all animals data
-    const url = 'http://localhost:5000/animals';
+    const url = 'https://animal-checker.vercel.app/animals';
 
     useEffect(() => {
         axios.get(url)
@@ -38,7 +38,7 @@ const Banner = () => {
 
     // get all category button
     useEffect(() => {
-        axios.get("http://localhost:5000/category")
+        axios.get("https://animal-checker.vercel.app/category")
       .then(response => {
         setAllButtonCategory(response.data);
         setLoading(false);

@@ -27,7 +27,7 @@ const AddAnimalForm = () => {
                 image_url
             }
 
-            const res = await axios.post("http://localhost:5000/animals", animalDetails)
+            const res = await axios.post("https://animal-checker.vercel.app/animals", animalDetails)
             if (res.data.insertedId) {
                 console.log(res.data);
                 form.reset();
